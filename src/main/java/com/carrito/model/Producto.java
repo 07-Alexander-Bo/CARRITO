@@ -1,5 +1,6 @@
 package com.carrito.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
@@ -8,24 +9,19 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-/**
- * Entidad Producto — representa un artículo disponible en la tienda.
- *
- * CORRECCIÓN: Se usa @Getter/@Setter en vez de @Data para evitar que Lombok
- * genere equals/hashCode/toString que recorren relaciones lazy (causa StackOverflow).
- */
 @Entity
 @Table(name = "producto")
 @Getter
 @Setter
 @NoArgsConstructor
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Producto {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotBlank(message = "El nombre del producto no puede estar vacío")
+    @NotBlank(message = "El nombre del producto no puede estar vacio")
     @Column(nullable = false)
     private String nombre;
 

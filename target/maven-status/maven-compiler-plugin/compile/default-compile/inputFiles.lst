@@ -1,0 +1,16 @@
+C:\ANALISISDESISTEMAS\CARRITO V3\carrito-fixed\src\main\java\com\carrito\service\CarritoService.java
+C:\ANALISISDESISTEMAS\CARRITO V3\carrito-fixed\src\main\java\com\carrito\exception\RecursoNoEncontradoException.java
+C:\ANALISISDESISTEMAS\CARRITO V3\carrito-fixed\src\main\java\com\carrito\CarritoComprasApplication.java
+C:\ANALISISDESISTEMAS\CARRITO V3\carrito-fixed\src\main\java\com\carrito\model\ItemCarrito.java
+C:\ANALISISDESISTEMAS\CARRITO V3\carrito-fixed\src\main\java\com\carrito\controller\CarritoController.java
+C:\ANALISISDESISTEMAS\CARRITO V3\carrito-fixed\src\main\java\com\carrito\controller\ProductoController.java
+C:\ANALISISDESISTEMAS\CARRITO V3\carrito-fixed\src\main\java\com\carrito\dto\CarritoDTO.java
+C:\ANALISISDESISTEMAS\CARRITO V3\carrito-fixed\src\main\java\com\carrito\dto\AgregarProductoDTO.java
+C:\ANALISISDESISTEMAS\CARRITO V3\carrito-fixed\src\main\java\com\carrito\service\ProductoService.java
+C:\ANALISISDESISTEMAS\CARRITO V3\carrito-fixed\src\main\java\com\carrito\repository\ProductoRepository.java
+C:\ANALISISDESISTEMAS\CARRITO V3\carrito-fixed\src\main\java\com\carrito\model\Carrito.java
+C:\ANALISISDESISTEMAS\CARRITO V3\carrito-fixed\src\main\java\com\carrito\repository\CarritoRepository.java
+C:\ANALISISDESISTEMAS\CARRITO V3\carrito-fixed\src\main\java\com\carrito\exception\StockInsuficienteException.java
+C:\ANALISISDESISTEMAS\CARRITO V3\carrito-fixed\src\main\java\com\carrito\exception\GlobalExceptionHandler.java
+C:\ANALISISDESISTEMAS\CARRITO V3\carrito-fixed\src\main\java\com\carrito\model\Producto.java
+C:\ANALISISDESISTEMAS\CARRITO V3\carrito-fixed\src\main\java\com\carrito\dto\ItemCarritoDTO.java

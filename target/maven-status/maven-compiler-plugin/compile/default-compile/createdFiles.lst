@@ -1,0 +1,16 @@
+com\carrito\repository\ProductoRepository.class
+com\carrito\controller\ProductoController.class
+com\carrito\dto\AgregarProductoDTO.class
+com\carrito\dto\CarritoDTO.class
+com\carrito\model\Carrito.class
+com\carrito\exception\RecursoNoEncontradoException.class
+com\carrito\service\ProductoService.class
+com\carrito\dto\ItemCarritoDTO.class
+com\carrito\exception\StockInsuficienteException.class
+com\carrito\exception\GlobalExceptionHandler.class
+com\carrito\controller\CarritoController.class
+com\carrito\repository\CarritoRepository.class
+com\carrito\model\ItemCarrito.class
+com\carrito\model\Producto.class
+com\carrito\service\CarritoService.class
+com\carrito\CarritoComprasApplication.class

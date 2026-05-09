@@ -2,24 +2,19 @@ package com.carrito.controller;
 
 import com.carrito.model.Producto;
 import com.carrito.service.ProductoService;
-import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * Controlador REST para la gestión del catálogo de productos.
  *
- * Endpoints:
- *   GET    /api/productos           → listar todos
- *   GET    /api/productos/{id}      → obtener uno
- *   GET    /api/productos?nombre=X  → buscar por nombre
- *   POST   /api/productos           → crear
- *   PUT    /api/productos/{id}      → actualizar
- *   DELETE /api/productos/{id}      → eliminar
+ * CORRECCIÓN: El POST y PUT ahora reciben un Map<String,Object> en vez de la
+ * entidad directamente, evitando el error 500 por deserialización de JPA entities.
  */
 @RestController
 @RequestMapping("/api/productos")
@@ -42,14 +37,22 @@ public class ProductoController {
     }
 
     @PostMapping
-    public ResponseEntity<Producto> crear(@Valid @RequestBody Producto producto) {
+    public ResponseEntity<Producto> crear(@RequestBody Map<String, Object> body) {
+        Producto producto = new Producto();
+        producto.setNombre((String) body.get("nombre"));
+        producto.setPrecio(((Number) body.get("precio")).doubleValue());
+        producto.setStock(((Number) body.get("stock")).intValue());
         return ResponseEntity.status(HttpStatus.CREATED).body(productoService.crearProducto(producto));
     }
 
     @PutMapping("/{id}")
     public ResponseEntity<Producto> actualizar(@PathVariable Long id,
-                                                @Valid @RequestBody Producto producto) {
-        return ResponseEntity.ok(productoService.actualizarProducto(id, producto));
+                                                @RequestBody Map<String, Object> body) {
+        Producto datos = new Producto();
+        datos.setNombre((String) body.get("nombre"));
+        datos.setPrecio(((Number) body.get("precio")).doubleValue());
+        datos.setStock(((Number) body.get("stock")).intValue());
+        return ResponseEntity.ok(productoService.actualizarProducto(id, datos));
     }
 
     @DeleteMapping("/{id}")
